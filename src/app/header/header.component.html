@@ -1,0 +1,32 @@
+<header>
+    <nav class="container navbar navbar-expand-md fixed-top nav-setting">
+        <ng-container *ngFor= "let main_link of logo_link">
+            <a class="navbar-brand brand-logo" href="{{main_link.href}}">
+                <img class="img-fluid" src="../assets/images/logo.png">
+            </a>
+        </ng-container>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto left-menu">
+                <app-modal></app-modal>
+                <ng-container *ngFor= "let l_menu of left_menus">
+                    <li class="nav-item">
+                        <a class="{{l_menu.class}}" href="{{l_menu.href}}">{{l_menu.text}}</a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+        <div class="admin-side">
+            <ul class="navbar-nav ml-auto right-menu">
+                <ng-container *ngFor= "let r_menu of right_menus">
+                    <li class="nav-item">
+                        <a class="{{r_menu.class}}" href="{{r_menu.href}}">{{r_menu.text}}</a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </nav>
+</header>

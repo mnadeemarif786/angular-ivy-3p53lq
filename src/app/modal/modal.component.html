@@ -1,0 +1,19 @@
+<div class="modal-here">	
+	<ng-template #content let-modal>
+	  <div class="modal-header">
+	    <h4 class="modal-title">Modal 1</h4>
+	    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+	      <span aria-hidden="true">&times;</span>
+	    </button>
+	  </div>
+	  <div class="modal-body">
+	    <p>Modal 1 body&hellip;</p>
+	  </div>
+	  <div class="modal-footer">
+	    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+	  </div>
+	</ng-template>
+	<ng-container>
+		<button class="btn post-task" (click)="openVerticallyCentered(content)">Post a task</button>
+	</ng-container>
+</div>
