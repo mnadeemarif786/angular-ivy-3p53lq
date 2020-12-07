@@ -1,0 +1,24 @@
+.modal-here {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.post-task {
+    background: #e0446d;
+    border-radius: 200px;
+    border: 2px solid rgba(41,43,50,.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,.25);
+    transition: text-shadow .35s cubic-bezier(.615,.19,.305,.91),border .35s cubic-bezier(.615,.19,.305,.91);
+    font-size: 11px;
+    height: 31px;
+    display: flex;
+    letter-spacing: .44px;
+    line-height: 27px;
+    margin: 0 10px 0 20px;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 0 1px 1px #9a0137;
+    width: 94px;
+    color: #fff;
+    align-items: center;
+}
