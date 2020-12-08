@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,6 +7,13 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 	styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
+
+    _btnLable: string = '';
+
+    @Input()
+    set btnLable(value) {
+      this._btnLable = value;
+    }
 
   	closeResult: string;
   	constructor(private modalService: NgbModal) {}

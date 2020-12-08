@@ -11,7 +11,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto left-menu">
-                <app-modal></app-modal>
+                <app-modal [btnLable]="_header"></app-modal>
                 <ng-container *ngFor= "let l_menu of left_menus">
                     <li class="nav-item">
                         <a class="{{l_menu.class}}" href="{{l_menu.href}}">{{l_menu.text}}</a>
