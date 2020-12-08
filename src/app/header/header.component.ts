@@ -1,38 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-	selector: 'app-header',
-	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.css']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
+  _header: string = "Post a task";
 
-  _header: string = 'Header btn';
+  logo_link = [{ href: "http://localhost:4200/" }];
 
-	logo_link = [
-		{"href" : "http://localhost:4200/"}
-	]
+  left_menus = [
+    { href: "", text: "Categories", class: "uper-line nav-link" },
 
-	left_menus = [
+    { href: "/tasks", text: "Browse tasks", class: "uper-line nav-link" },
 
-		{"href" : "", "text" :"Categories", "class" : "uper-line nav-link"},
+    { href: "/how-it-works", text: "How it works", class: "uper-line nav-link" }
+  ];
+  right_menus = [
+    { href: "/sign-up", text: "Sign Up", class: "nav-link sign-up" },
 
-		{"href" : "/tasks", "text" :"Browse tasks", "class" : "uper-line nav-link"},
+    { href: "/login", text: "Login", class: "nav-link login" },
 
-		{"href" : "/how-it-works", "text" :"How it works", "class" : "uper-line nav-link"}
-	]
-	right_menus = [
-		{"href" : "/sign-up", "text" :"Sign Up", "class" : "nav-link sign-up"},
+    { href: "/earn-money", text: "Become a Tasker", class: "nav-link tasker" }
+  ];
 
-		{"href" : "/login", "text" :"Login", "class" : "nav-link login"},
+  constructor() {}
 
-		{"href" : "/earn-money", "text" :"Become a Tasker", "class" : "nav-link tasker"}
-	]
-
-	constructor() { }
-
-	ngOnInit(): void {
-
-	}
-
+  ngOnInit(): void {}
 }

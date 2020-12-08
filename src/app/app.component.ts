@@ -7,6 +7,7 @@ import {NgbConfig} from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
   title = 'Problemsolver';
+  _banner: string = "Get Started Now";
   constructor(ngbConfig: NgbConfig) {
     ngbConfig.animation = true;
   }
